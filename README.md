@@ -1,5 +1,5 @@
 # How to play?
-git clone the repo and run ``cargo run``, all the dependencies will be installed automatically
+``git clone`` the repo<br>run ``cargo run``<br>All the dependencies will be installed automatically
 
 ## Pictures!!
 ![](https://cdn.discordapp.com/attachments/947092663914623016/984753541627400232/unknown.png)
