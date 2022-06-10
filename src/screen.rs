@@ -9,6 +9,7 @@ use crossterm::{
 
 use std::io::stdout;
 
+// clear screen, move cursor to the top left
 pub fn clear() -> crossterm::Result<()> {
 	execute!(
 		stdout(),
