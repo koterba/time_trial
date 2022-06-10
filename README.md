@@ -1,5 +1,8 @@
 # How to play?
-``git clone`` the repo<br>run ``cargo run``<br>All the dependencies will be installed automatically
+1. ``git clone https://github.com/alannxq/time_trial.git`` OR download this repository manually<br>
+2. ``cd time_trial``
+3. ``cargo run``
+4. Enjoy!!
 
 ## Pictures!!
 ![](https://cdn.discordapp.com/attachments/947092663914623016/984753541627400232/unknown.png)
