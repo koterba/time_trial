@@ -38,17 +38,18 @@ fn main() -> crossterm::Result<()> {
     let reader = Reader; // for reading keys from terminal
     terminal::enable_raw_mode()?;
 
-    let start_game = menu::display_menu();
+    let start_game = menu::display_menu(); // run menu scene
     let mut board = get_board();
 
-    println!("Start game by pressing any of the arrow keys.\nCollect all the '^' as fast as possible to win");
-    let event = reader.read_key()?;
+    println!("Start the game by pressing any of the arrow keys.\nCollect all the '^' as fast as possible to win");
+    let event = reader.read_key()?; // read_key will wait, which is good as the timer will start only once the user presses a key
     display_board(&board);
 
-    let start_time = Instant::now();
+    let start_time = Instant::now(); // start timer once the user presses a key
 
     while start_game {
         let event = reader.read_key()?;
+        // all keys for moving the player
         match event {
             KeyEvent {
                 code: KeyCode::Up,
@@ -75,6 +76,7 @@ fn main() -> crossterm::Result<()> {
         clear();
         display_board(&board);
 
+        // if no more pieces are left, finish the game
         if is_all_collected(&board) {
             break
         }
