@@ -1,5 +1,5 @@
 # How to play?
-1. ``git clone https://github.com/alannxq/time_trial.git`` OR download this repository manually<br>
+1. ``git clone https://github.com/alannxq/time_trial.git`` **OR** download this repository manually<br>
 2. ``cd time_trial``
 3. ``cargo run``
 4. Enjoy!!
