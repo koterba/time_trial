@@ -11,6 +11,7 @@ pub enum Move {
 pub fn move_player(board: &mut Vec<Vec<char>>, dir: Move) {
 	let (row, column) = board::get_player_location(&board);
 
+	// make sure that player cannot go out of bounds (non valid index)
 	if dir == Move::Up && row - 1 == 0 {
 		return
 	} else if dir == Move::Down && row + 1 == 9 {
@@ -21,6 +22,8 @@ pub fn move_player(board: &mut Vec<Vec<char>>, dir: Move) {
 		return
 	}
 
+	// replace player with empty space, replace empty space in correct
+	// direction with the player
 	match dir {
 		Move::Up => {
 			board[row][column] = ' ';
